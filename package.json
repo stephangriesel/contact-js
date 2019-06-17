@@ -1,0 +1,30 @@
+{
+  "name": "contact-jsnode",
+  "version": "1.0.0",
+  "description": "Contact form using Node Mailer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephangriesel/contact-js.git"
+  },
+  "keywords": [
+    "contact",
+    "form",
+    "node"
+  ],
+  "author": "Stephan Griesel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephangriesel/contact-js/issues"
+  },
+  "homepage": "https://github.com/stephangriesel/contact-js#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "nodemailer": "^6.2.1"
+  }
+}
