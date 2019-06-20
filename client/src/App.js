@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Form>
+      <FormGroup>
+        <Label for="name">Name:</Label>
+        <Input 
+          type="text"
+          name="name"
+          // onChange={this.handleChange} 
+          />
+      </FormGroup>
+
+      <FormGroup>
+        <Label for="name">Email:</Label>
+        <Input 
+          type="email"
+          name="email"
+          // onChange={this.handleChange} 
+          />
+      </FormGroup>
+
+      <FormGroup>
+        <Label for="name">Message:</Label>
+        <Input 
+          type="textarea"
+          name="message"
+          // onChange={this.handleChange} 
+          />
+      </FormGroup>
+
+      <Button>Submit</Button>
+    </Form>
   );
 }
 
