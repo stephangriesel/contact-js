@@ -19,8 +19,7 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    // res.send('test');
-    res.render('contact');
+    res.render('/contact');
 });
 
 app.listen(3000, () => console.log('started'));
