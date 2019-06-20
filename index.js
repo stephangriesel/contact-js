@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const app = express();
+const dotenv = require('dotenv');
 
-const path = require('path');
+dotenv.config();
+
 
 // Body Parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,18 +24,18 @@ app.post('/api/form', (req,res) => {
         `
 
         let transporter = nodemailer.createTransport({
-            host: '',
-            port: 000,
+            host: process.env.HOST_NAME,
+            port: process.env.MAIL_PORT,
             auth: {
-                user: `${username}`,
-                pass: `${password}`
+                user: process.env.USER_NAME,
+                pass: process.env.USER_PASS
             }
         })
 
         let mailOptions = {
-            from: 'info@mydomain.com',
-            to: 'fresh@freshdesk.com',
-            replyTo: 'info@mydomain.com',
+            from: 'test@skep.co.za  ',
+            to: 'sgriesel@gmail.com',
+            replyTo: 'test@skep.co.za',
             subject: 'New Message',
             text: req.body.message,
             html: htmlEmail
