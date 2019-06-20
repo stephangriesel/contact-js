@@ -4,7 +4,10 @@
   "description": "Contact form using Node Mailer",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   "homepage": "https://github.com/stephangriesel/contact-js#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
     "create-react-app": "^3.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
