@@ -20,9 +20,17 @@ class App extends Component {
     })
   }
 
+  handleSubmit(e) {
+    e.preventDefault()
+
+    const {
+      name, email, message
+    } = this.state
+  }
+
   render() {
     return (
-      <Form style={{ width: '50%' }}>
+      <Form onSubmit={this.handleSubmit} style={{ width: '50%' }}>
         <FormGroup>
           <Label for="name">Name:</Label>
           <Input
