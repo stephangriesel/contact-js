@@ -68,6 +68,7 @@ class UserForm extends Component {
       case 2:
         return (
           <FormPersonalDetails
+            nextStep={this.nextStep}
             prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}

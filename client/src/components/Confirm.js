@@ -31,7 +31,7 @@ class FormUserDetails extends Component {
           email,
           message
         })
-      }
+      };
 
 
     render() {
