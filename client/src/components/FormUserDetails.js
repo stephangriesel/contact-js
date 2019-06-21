@@ -13,7 +13,7 @@ class FormUserDetails extends Component {
         const { values, handleChange } = this.props;
         return (
             <MuiThemeProvider>
-                <div class="formFields">
+                <div className="formFields">
                     <TextField
                         hintText="Enter First Name"
                         floatingLabelText="First Name"

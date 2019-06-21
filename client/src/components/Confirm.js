@@ -38,43 +38,44 @@ class FormUserDetails extends Component {
         const { values: { firstName, lastName, email, phone, message, location} } = this.props;
         return (
             <MuiThemeProvider>
-                <div class="formFields">
+                <div className="formFields">
                    <List>
                        <ListItem 
-                        primary="First Name"
+                        primaryText="First Name"
                         secondaryText={ firstName }
                        />
                    </List>
                    <List>
                        <ListItem 
-                        primary="Last Name"
+                        primaryText="Last Name"
                         secondaryText={ lastName }
                        />
                    </List>
                    <List>
                        <ListItem 
-                        primary="Email"
+                        primaryText="Email"
                         secondaryText={ email }
                        />
                    </List>
                    <List>
                        <ListItem 
-                        primary="Phone"
+                        primaryText="Phone"
                         secondaryText={ phone }
                        />
                    </List>
                    <List>
                        <ListItem 
-                        primary="Message"
+                        primaryText="Message"
                         secondaryText={ message }
                        />
                    </List>
                    <List>
                        <ListItem 
-                        primary="Location"
+                        primaryText="Location"
                         secondaryText={ location }
                        />
                    </List>
+                   <div className="buttonPosition">
                     <RaisedButton 
                         label="confirm"
                         primary={true}
@@ -88,6 +89,7 @@ class FormUserDetails extends Component {
                         style={styles.button}
                         onClick={this.back}
                     />
+                    </div>
                 </div>
             </MuiThemeProvider>
         )

@@ -18,7 +18,7 @@ class FormPersonalDetails extends Component {
         const { values, handleChange } = this.props;
         return (
             <MuiThemeProvider>
-                <div class="formFields">
+                <div className="formFields">
                     <TextField
                         hintText="Enter location"
                         floatingLabelText="Location"
