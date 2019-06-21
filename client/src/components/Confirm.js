@@ -3,10 +3,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { List, ListItem } from 'material-ui/List';
 import RaisedButton from 'material-ui/RaisedButton';
 import '../css/FormUserDetails.css';
-import axios from 'axios';
 
 
 class FormUserDetails extends Component {
+
     continue = e => {
 
         e.preventDefault();
@@ -18,21 +18,6 @@ class FormUserDetails extends Component {
         e.preventDefault();
         this.props.prevStep();
     };
-
-    async handleSubmit(e) {
-        e.preventDefault()
-    
-        const {
-          name, email, message
-        } = this.state
-    
-        const form = await axios.post('/api/form', {
-          name,
-          email,
-          message
-        })
-      };
-
 
     render() {
         const { values: { firstName, lastName, email, phone, message, location} } = this.props;

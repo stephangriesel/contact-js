@@ -6,17 +6,6 @@ import '../css/FormUserDetails.css';
 
 
 class Success extends Component {
-    continue = e => {
-
-        e.preventDefault();
-        // Process Form
-        this.props.nextStep();
-    }
-
-    back = e => {
-        e.preventDefault();
-        this.props.prevStep();
-    };
 
     render() {
         return (
