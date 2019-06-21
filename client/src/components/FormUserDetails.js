@@ -44,9 +44,22 @@ class FormUserDetails extends Component {
                         onChange={handleChange('message')}
                         defaultValue={values.message} 
                     />
+                    <RaisedButton 
+                        label="continue"
+                        primary={true}
+                        style={styles.button}
+                        onClick={this.continue}
+                    />
                 </div>
             </MuiThemeProvider>
         )
+    }
+}
+
+const styles = {
+    button: {
+        margin:15,
+        width:'20%'
     }
 }
 
